@@ -66,6 +66,88 @@ body, .MirrorVerseApp {
   overflow-x: hidden;
 }
 
+/* Pastel theme: enforce backgrounds, buttons, and accents visually */
+[data-theme="pastel"] body,
+[data-theme="pastel"] .MirrorVerseApp {
+  background: var(--primary-bg) !important;
+  color: var(--text-main) !important;
+}
+
+/* Panel uses pastel soft backgrounds */
+[data-theme="pastel"] .main-panel,
+[data-theme="pastel"] .vault-modal,
+[data-theme="pastel"] .story-chamber-glow,
+[data-theme="pastel"] .neon-glow-panel,
+[data-theme="pastel"] .metrics-pane,
+[data-theme="pastel"] .timeline-builder-panel,
+[data-theme="pastel"] .timeline-flowchart,
+[data-theme="pastel"] .badge-modal,
+[data-theme="pastel"] .personality-prompt-card {
+  background: var(--panel-bg) !important;
+  box-shadow: 0 0 24px 0 var(--panel-glow) !important;
+  color: var(--text-main) !important;
+  backdrop-filter: blur(15px) saturate(1.16);
+}
+
+/* Buttons/floating actions pastelize on pastel theme */
+[data-theme="pastel"] .cta-btn,
+[data-theme="pastel"] .vault-btn,
+[data-theme="pastel"] .preset-btn,
+[data-theme="pastel"] .custom-btn,
+[data-theme="pastel"] .audio-toggle,
+[data-theme="pastel"] .event-add,
+[data-theme="pastel"] .event-remove,
+[data-theme="pastel"] .theme-toggle,
+[data-theme="pastel"] .badges-btn,
+[data-theme="pastel"] .vault-load {
+  background: var(--neon-accent) !important;
+  color: var(--text-main) !important;
+  border-color: var(--neon-accent2) !important;
+  box-shadow: 0 0 8px 2px var(--neon-accent2), 0 0 12px 0 var(--neon-accent) inset !important;
+  transition: background 0.33s, box-shadow 0.25s, color 0.25s;
+}
+[data-theme="pastel"] .cta-btn:hover,
+[data-theme="pastel"] .vault-btn:hover,
+[data-theme="pastel"] .preset-btn:hover,
+[data-theme="pastel"] .custom-btn:hover,
+[data-theme="pastel"] .audio-toggle:hover,
+[data-theme="pastel"] .event-add:hover,
+[data-theme="pastel"] .theme-toggle:hover,
+[data-theme="pastel"] .badges-btn:hover,
+[data-theme="pastel"] .vault-load:hover {
+  background: var(--neon-accent2) !important;
+  color: #476662 !important;
+}
+
+/* Gradient text and major headings should pastelize */
+[data-theme="pastel"] .neon-gradient,
+[data-theme="pastel"] .panel-title {
+  background: var(--gradient-accent) !important;
+  background-clip: text !important;
+  color: transparent !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: 0 2px 18px #ffd1eb77, 0 2px 6px #c6ffd133 !important;
+}
+
+[data-theme="pastel"] .neon-glow,
+[data-theme="pastel"] .neon-glow-panel {
+  box-shadow: 0 0 11px 1px var(--neon-accent2), 0 0 14px 0 var(--neon-accent) inset !important;
+  border-color: var(--neon-accent2) !important;
+}
+
+[data-theme="pastel"] .neon-gradient-glow {
+  background: var(--gradient-accent) !important;
+  color: var(--text-main) !important;
+  border: none !important;
+  box-shadow: 0 0 21px 3px var(--neon-accent), 0 0 12px 0 var(--neon-accent2) inset !important;
+}
+
+[data-theme="pastel"] a, 
+[data-theme="pastel"] .App-link {
+  color: var(--link) !important;
+}
+
 /* Background layers */
 .starfield-bg,
 .particle-bg {
