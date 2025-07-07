@@ -35,6 +35,24 @@
   --badge-gold: #e7b63c;
 }
 
+/* PASTEL LIGHT THEME - pastel pink and green */
+[data-theme="pastel"] {
+  --primary-bg: #FFD1EB;
+  --secondary-bg: #C6FFD1;
+  --panel-bg: #FFF7FC;
+  --panel-glow: #b4f5ce77;
+  --neon-accent: #C6FFD1;
+  --neon-accent2: #FFD1EB;
+  --gradient-accent: linear-gradient(90deg, #FFD1EB 0%, #C6FFD1 80%, #ffecf4 100%);
+  --text-main: #153c28;
+  --text-dim: #866d8b;
+  --link: #62a473;
+  --timeline: #cdffe6;
+  --badge-bronze: #e87a41;
+  --badge-silver: #bba5c7;
+  --badge-gold: #e2c849;
+}
+
 body, .MirrorVerseApp {
   background: var(--primary-bg);
   color: var(--text-main);
