@@ -64,28 +64,4 @@ export function mockMetricsForTimeline(id) {
   };
 }
 
-// PUBLIC_INTERFACE
-export function mockStoryForTimeline(timeline) {
-  if (!timeline) return { paragraphs: [], badges: [] };
-  const events = timeline.events || [];
-  // Simple dynamic story template
-  let ps = [
-    `In the MirrorVerse, one choice branches into infinite outcomes. Your journey begins with: "${timeline.prompt}".`,
-    `Key moments shape this path: ${events.slice(0,3).map(e => `"${e.label}" (${e.year})`).join(", ")}.`,
-    `Where others saw boundaries, you followed curiosity and discovered unexpected possibilities.`
-  ];
-  if (events.length > 3)
-    ps.push("Your resilience and insight have unlocked a unique outcome, rarely seen by most travelers in the MirrorVerse.");
 
-  const badgeRand = (events.length + (timeline.prompt || "").length) % 3;
-  const badgeTiers = ["bronze", "silver", "gold"];
-  return {
-    paragraphs: ps,
-    badges: [{
-      title: badgeTiers[badgeRand].toUpperCase() + " Explorer",
-      desc: "For venturing into new branches of the MirrorVerse.",
-      tier: badgeTiers[badgeRand],
-      icon: badgeRand === 2 ? "🏆" : badgeRand === 1 ? "⭐" : "🔗"
-    }]
-  };
-}

@@ -1,0 +1,89 @@
+{
+  "rebellious_career_shift": [
+    {
+      "id": "c1",
+      "tags": ["career", "rebellious", "shift"],
+      "title": "Breaking The Mold",
+      "intro": "Your yearning for change becomes irresistible after years of routine. One fateful morning you decide to break free from the expected path.",
+      "decision": "Do you resign immediately or begin to plot a bold exit?",
+      "choices": [
+        { "text": "Resign that day", "next": "c1_quit" },
+        { "text": "Secret silent plotting", "next": "c1_plot" }
+      ]
+    },
+    {
+      "id": "c1_quit",
+      "tags": ["career", "rebellious"],
+      "body": "You announce your departure. The shock on your manager's face is nearly worth the uncertainty. The next day, you feel both fear and liberation.",
+      "decision": "What's your first step?",
+      "choices": [
+        { "text": "Travel abroad", "next": "travel_abroad" },
+        { "text": "Start your own business", "next": "startup_founder" }
+      ]
+    },
+    {
+      "id": "c1_plot",
+      "tags": ["career", "rebellious"],
+      "body": "You quietly plot your exit, researching possible paths. Weeks pass as excitement battles anxiety.",
+      "decision": "Do you confide in a close friend or keep your plans secret?",
+      "choices": [
+        { "text": "Tell a friend", "next": "c1_friend" },
+        { "text": "Keep it secret", "next": "c1_solo" }
+      ]
+    }
+  ],
+  "romantic_arc": [
+    {
+      "id": "r1",
+      "tags": ["romantic", "relationship"],
+      "title": "Serendipitous Encounter",
+      "intro": "On a rainy evening, you meet eyes with a stranger in a bustling café. The energy is magnetic.",
+      "decision": "Do you introduce yourself?",
+      "choices": [
+        { "text": "Yes—seize the moment", "next": "r1_engage" },
+        { "text": "No—observe from afar", "next": "r1_observe" }
+      ]
+    },
+    {
+      "id": "r1_engage",
+      "tags": ["romantic"],
+      "body": "Your courage is rewarded as laughter and stories are exchanged late into the night.",
+      "decision": "Exchange numbers or plan to meet again?",
+      "choices": [
+        { "text": "Exchange numbers", "next": "r1_numbers" },
+        { "text": "Plan next meeting", "next": "r1_next_meeting" }
+      ]
+    },
+    {
+      "id": "r1_observe",
+      "tags": ["romantic"],
+      "body": "You watch as the stranger leaves, wondering 'what if?' Sometimes, missed moments define an entire path.",
+      "choices": []
+    }
+  ],
+  "peaceful_hermit_life": [
+    {
+      "id": "ph1",
+      "tags": ["peaceful", "hermit", "solitude"],
+      "title": "Seclusion Beckons",
+      "intro": "After years of bustle, you choose quietude—settling in a tiny cabin by the woods.",
+      "decision": "Do you embrace total solitude or maintain a trickle of outside connection?",
+      "choices": [
+        { "text": "Total solitude", "next": "ph1_solo" },
+        { "text": "Occasional letters with a friend", "next": "ph1_letters" }
+      ]
+    },
+    {
+      "id": "ph1_solo",
+      "tags": ["hermit", "solitude"],
+      "body": "Days blend into each other, the silence immense. You find a new rhythm, attuned to seasons and stars.",
+      "choices": []
+    },
+    {
+      "id": "ph1_letters",
+      "tags": ["hermit", "connection"],
+      "body": "You scribble and receive letters with an old friend; stories bridge your worlds, preserving human warmth.",
+      "choices": []
+    }
+  ]
+}
