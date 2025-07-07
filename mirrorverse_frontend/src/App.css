@@ -455,6 +455,60 @@ a, .App-link {
   text-align: left;
   max-width: 650px;
 }
+
+/* === Storybook Narrative Display (storybook-narrative, storybook-chapter) === */
+.storybook-narrative {
+  background: var(--panel-bg);
+  box-shadow: 0 0 44px var(--panel-glow);
+  border-radius: 2.7em;
+  padding: 0;
+  margin: 0 auto 2.7em auto;
+  position: relative;
+  z-index: 2;
+  min-width: 320px;
+  width: 100%;
+  overflow: hidden;
+  transition: box-shadow 0.33s;
+}
+.storybook-chapter {
+  transition: background 0.45s, border-left 0.28s, filter 0.41s;
+}
+.storybook-chapter.active {
+  background: var(--panel-bg);
+  border-left: 12px solid var(--neon-accent2);
+  filter: drop-shadow(0 0 18px var(--neon-accent2));
+}
+.storybook-bg-pastel { background: linear-gradient(120deg, #ffd1eb33, #c6ffd155); }
+.storybook-bg-light { background: linear-gradient(99deg, #e4e2ff55, #fff7fc44); }
+.storybook-bg-dark { background: linear-gradient(140deg, #23133f99, #0fffe91c 65%, #e840c344); }
+.storybook-chapter-title {
+  font-family: 'Orbitron', 'Poppins', 'Segoe UI', Arial, sans-serif;
+  letter-spacing: 0.03em;
+}
+.storybook-chapter-icon {
+  filter: drop-shadow(0 0 4px #0fffe9bb);
+}
+.storybook-chapter-label {
+  font-weight: bold;
+  margin-left: 24px;
+}
+.storybook-chapter-body {
+  margin-top: 0.34em;
+  margin-bottom: 1.1em;
+  font-size: 1.19em;
+  font-family: 'Georgia', serif;
+  letter-spacing: 0.01em;
+}
+.storybook-chapter-intro {
+  font-size: 1.11em;
+  opacity: 0.8;
+  font-style: italic;
+  margin-bottom: 0.3em;
+}
+@media (max-width: 700px) {
+  .storybook-narrative { border-radius: 1.1em; }
+}
+
 .chamber-narrative { margin-bottom: 2.5rem;}
 .story-paragraph {
   margin-bottom: 1.7em;
