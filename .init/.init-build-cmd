@@ -1,0 +1,4 @@
+{
+    "command": "npm install && npx tsc --noEmit && npm test -- --ci",
+    "working_directory": "/home/kavia/workspace/code-generation/multiverse-nexus-110544-dd67cfb8/mirrorverse_frontend"
+}
